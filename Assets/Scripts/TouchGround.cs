@@ -10,10 +10,17 @@ public class TouchGround : MonoBehaviour
     //metodo quecomprueba si nuestro collider esta tocando alguna geometria(en este caso el suelo)
     private void OnTriggerEnter2D(Collider2D Collision)
     {
-        isGrounded = true;
+        if (Collision.gameObject.tag == "Mapa")
+        {
+            isGrounded = true;
+        }
+      
     }
     private void OnTriggerExit2D(Collider2D Collision)
     {
-        isGrounded = false;
+        if (Collision.gameObject.tag == "Mapa")
+        {
+            isGrounded = false;
+        }
     }
 }

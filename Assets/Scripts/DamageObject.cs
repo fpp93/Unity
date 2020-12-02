@@ -12,7 +12,7 @@ public class DamageObject : MonoBehaviour
         {
             Debug.Log("Player Damaged");
             //destruimos el perosnaje
-            Destroy(collision.gameObject);
+            collision.transform.GetComponent<PlayerRespawn>().PlayerDamaged();
         }
     }
 }

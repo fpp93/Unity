@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FruitCollected : MonoBehaviour
 {
     //metodo que se activa cuando el collider de la fruta entra en contacto con nuestro personaje
@@ -16,9 +17,8 @@ public class FruitCollected : MonoBehaviour
             //ya que collected la hemos puesto como hijo, la cogemos y la activamos cuando cogamos la fruta
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             //destruimos el objeto ya que no existira en el mapa al cogerla
-
-            FindObjectOfType<FruitManager>().AllFruitsColected();
             Destroy(gameObject, 0.5f);
+            
 
         }
     }
